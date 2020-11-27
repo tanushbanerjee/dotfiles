@@ -97,6 +97,7 @@ set foldmethod=syntax
 
 " Testing And Compiling The Solutions
 nnoremap <leader>t :!make test<CR>
+nnoremap <C-c> :!xclip -sel c < sol.cpp<Enter>
 
 " FZF configs
 let $FZF_DEFAULT_COMMAND = 'rg --files'

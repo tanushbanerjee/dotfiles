@@ -7,10 +7,10 @@ local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. wit
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'alacritty',
+    terminal = 'kitty',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
-    quake = 'st',
+    quake = 'kitty',
     screenshot = 'flameshot full -p ~/Pictures',
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot full -p ~/Pictures -d 5000',
