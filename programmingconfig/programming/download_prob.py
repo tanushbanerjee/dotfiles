@@ -93,7 +93,17 @@ def make_prob(data, name):
     save_samples(data, probDir)
 
     print()
-
+def listToString(s):  
+    
+    # initialize an empty string 
+    str1 = ""  
+    
+    # traverse in the string   
+    for ele in s:  
+        str1 += ele   
+    
+    # return string   
+    return str1  
 def main():
     arguments = docopt(__doc__)
 
@@ -111,6 +121,7 @@ def main():
             for data, name in zip(datas, names):
                 make_prob(data, name)
         elif cnt := arguments['--number']:
+            listToString(cnt)
             cnt = int(cnt)
             datas = listen_many(num_items=cnt)
             for data in datas:
