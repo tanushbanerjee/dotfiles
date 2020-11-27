@@ -22,13 +22,13 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin()
 Plug 'vim-airline/vim-airline'
+Plug 'Yggdroot/indentLine'
+Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
-Plug 'altercation/vim-colors-solarized'
+Plug 'preservim/nerdtree'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-sleuth'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-utils/vim-man'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -36,7 +36,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mbbill/undotree'
 call plug#end()
-colorscheme gruvbox
+let ayucolor="dark"
+colorscheme ayu
 set background=dark
 let mapleader=" "
 let g:netrw_browse_split=2
@@ -49,7 +50,8 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>n :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+"nnoremap <leader>n :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 inoremap <silent><expr> <TAB>
@@ -137,3 +139,9 @@ endif
 let &t_SI = "\<Esc>[5 q"
 " Normal mode
 let &t_EI = "\<Esc>[2 q"
+" IndentLine {{
+let g:indentLine_char = ''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
+" }}
