@@ -15,7 +15,7 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undofile
+resize set undofile
 set incsearch
 set termguicolors
 set colorcolumn=80
@@ -23,8 +23,11 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
+Plug 'dzhou121/gonvim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dzhou121/gonvim-fuzzy'
 Plug 'bling/vim-bufferline'
 Plug 'preservim/nerdtree'
 Plug 'Raimondi/delimitMate'
@@ -145,3 +148,8 @@ let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 " }}
+let g:gonvim_draw_statusline = 0
+
+let g:gonvim_start_fullscreen = 1
+
+

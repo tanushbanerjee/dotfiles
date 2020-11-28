@@ -198,7 +198,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias downloadprob="~/programming/download_prob.py"
 alias downloadprob6="~/programming/download_prob.py contest A B C D E F"
 alias downloadprob4="~/programming/download_prob.py contest A B C D"
-
+alias makeprob="~/programming/make_prob.sh"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -207,3 +207,7 @@ mkcd () {
     mkdir -p "${1}"
     cd "${1}"
 }
+eval "$(lua /home/tanush/z.lua/z.lua --init zsh)"
+alias sn="shutdown now"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias gvim="~/gonvim/gonvim/gonvim.sh"
