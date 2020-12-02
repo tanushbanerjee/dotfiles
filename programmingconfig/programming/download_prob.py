@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Download and setup problems from Competitive Companion
+"""
+download_prob.py := Download and setup problems from Competitive Companion
 Usage:
   download_prob.py prob [<name>]
   download_prob.py contest [<name>... | -n <number>]

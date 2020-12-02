@@ -112,7 +112,7 @@ local globalKeys =
     {modkey},
     'c',
     function()
-      awful.util.spawn(apps.default.editor)
+      awful.util.spawn_with_shell(kitty)
     end,
     {description = 'open a text/code editor', group = 'launcher'}
   ),
@@ -129,7 +129,7 @@ local globalKeys =
     {modkey},
     "Return",
     function()
-      awful.spawn(apps.default.terminal)
+      awful.util.spawn(apps.default.terminal)
     end,
     {description = 'open a terminal', group = 'launcher'}
   ),

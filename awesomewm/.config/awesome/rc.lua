@@ -87,3 +87,4 @@ _G.client.connect_signal(
 )
 
 awful.util.spawn_with_shell('nitrogen --restore')
+awful.util.spawn_with_shell('copyq')

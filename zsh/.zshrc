@@ -117,7 +117,7 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
 # vim and emacs
-alias vim="nvim"
+alias v="nvim"
 # pacman and yay
 alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
 alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
@@ -132,12 +132,12 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias ls='exa -al --color=always --icons -a --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --icons -a --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --icons -a --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
-alias l='exa -l --color=always --group-directories-first'  # long format
+alias l='exa -l --color=always --icons -a --group-directories-first'  # long format
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -211,3 +211,6 @@ eval "$(lua /home/tanush/z.lua/z.lua --init zsh)"
 alias sn="shutdown now"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias gvim="~/gonvim/gonvim/gonvim.sh"
+alias install="sudo pacman -S"
+alias purge="sudo pacman -sR"
+alias lg='lazygit'

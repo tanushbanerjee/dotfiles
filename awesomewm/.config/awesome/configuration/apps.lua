@@ -7,7 +7,7 @@ local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. wit
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'kitty',
+    terminal = 'kitty -e nvim -c terminal',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'kitty',
