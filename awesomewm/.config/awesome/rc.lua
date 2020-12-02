@@ -18,11 +18,6 @@ require('module.decorate-client')
 --require('module.backdrop')
 require('module.exit-screen')
 require('module.quake-terminal')
-
-
--- Auto Start
-awful.util.spawn_with_shell("xrandr -s 1")
-
 -- Setup all configurations
 require('configuration.client')
 require('configuration.tags')
