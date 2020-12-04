@@ -67,6 +67,9 @@ _G.client.connect_signal(
 )
 
 
+-- Auto Start
+awful.util.spawn_with_shell('xrandr -s 1')
+
 -- Make the focused window have a glowing border
 _G.client.connect_signal(
   'focus',
