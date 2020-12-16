@@ -28,6 +28,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dzhou121/gonvim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 Plug 'dzhou121/gonvim-fuzzy'
 Plug 'bling/vim-bufferline'
 Plug 'preservim/nerdtree'
@@ -167,3 +168,4 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+

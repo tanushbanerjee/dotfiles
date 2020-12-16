@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-download_prob.py := Download and setup problems from Competitive Companion
+download_prob := Download and setup problems from Competitive Companion
 Usage:
-  download_prob.py prob [<name>]
-  download_prob.py contest [<name>... | -n <number>]
-  download_prob.py samples
-  download_prob.py echo
+  download_prob prob [<name>]
+  download_prob contest [<name>... | -n <number>]
+  download_prob samples
+  download_prob echo
 Options:
   -h --help     Show this screen.
 Contest flags:
@@ -25,6 +25,7 @@ import re
 def listen_once(*, timeout=None):
     json_data = None
 
+    # Performing a POST request on the port 10046, To get information from Competitive Companion
     class CompetitiveCompanionHandler(http.server.BaseHTTPRequestHandler):
         def do_POST(self):
             nonlocal json_data
@@ -33,7 +34,7 @@ def listen_once(*, timeout=None):
     with http.server.HTTPServer(('127.0.0.1', 10046), CompetitiveCompanionHandler) as server:
         server.timeout = timeout
         server.handle_request()
-
+    # Printing out the JSON Dumps got from Competitive Companion
     if json_data is not None:
         print(f"Got data {json.dumps(json_data)}")
     else:
@@ -94,17 +95,16 @@ def make_prob(data, name):
     save_samples(data, probDir)
 
     print()
-def listToString(s):  
-    
+def listToString(s):
     # initialize an empty string 
-    str1 = ""  
-    
+    str1 = ""
+
     # traverse in the string   
-    for ele in s:  
-        str1 += ele   
-    
+    for ele in s:
+        str1 += ele
     # return string   
-    return str1  
+    return str1
+
 def main():
     arguments = docopt(__doc__)
 
