@@ -15,7 +15,7 @@ return {
     region_screenshot = 'flameshot gui -p ~/pictures',
     delayed_screenshot = 'flameshot full -p ~/pictures -d 5000',
     browser = 'vivaldi-stable',
-    editor = 'gvim', -- gui text editor
+    editor = 'geany', -- gui text editor
     social = 'discord',
     game = rofi_command,
     files = 'nemo',

@@ -5,15 +5,16 @@ SAVEHIST=1000
 bindkey -v
 # End of lines added by compinstall
 autoload -Uz compinit
-compinit
 
 autoload -Uz promptinit
 promptinit
 ### ALIASES ###
-
-alias zshconfig="v ~/dotfiles/zsh/.zshrc"
+### CONFIG ALIASES ###
+alias zshconfig="v ~/dotfiles/zsh/.config/zsh/.zshrc"
 alias nvimconfig="v ~/dotfiles/neovim/.config/nvim/init.vim"
-alias nano="micro"
+alias awesomeconfig="cd ~/dotfiles/awesomewm/.config/awesome/"
+
+alias nano="micro" 
 # root privileges
 alias doas="doas --"
 
@@ -117,3 +118,5 @@ mkcd () {
 	mkdir -p "${1}"
 	cd "${1}"
 }
+alias gvim='gnvim'
+alias vim='nvim'

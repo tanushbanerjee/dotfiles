@@ -83,6 +83,7 @@ _G.client.connect_signal(
     c.border_color = beautiful.border_normal
   end
 )
-
+-- Auto Start
 awful.util.spawn_with_shell('nitrogen --restore')
 awful.util.spawn_with_shell('copyq')
+awful.util.spawn_with_shell('sudo /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1')

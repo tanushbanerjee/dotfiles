@@ -37,7 +37,7 @@ export IMAGE="sxiv"
 export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
-export WM="bspwm"
+export WM="awesome"
 
 export CM_SELECTIONS="clipboard"
 export CM_DEBUG=0
